@@ -117,6 +117,15 @@ class TypeBasedCollectionResourceMapping implements CollectionResourceMapping {
 	public boolean isPagingResource() {
 		return false;
 	}
+		
+	/* 
+	 * (non-Javadoc)
+	 * @see org.springframework.data.rest.core.mapping.ResourceMapping#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return annotation == null ? null : annotation.description();
+	}
 
 	/* 
 	 * (non-Javadoc)

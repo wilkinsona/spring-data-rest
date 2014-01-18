@@ -112,6 +112,15 @@ public class SearchResourceMappings implements Iterable<MethodResourceMapping>, 
 	public boolean isPagingResource() {
 		return false;
 	}
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see org.springframework.data.rest.core.mapping.ResourceMapping#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return null;
+	}
 
 	/* 
 	 * (non-Javadoc)

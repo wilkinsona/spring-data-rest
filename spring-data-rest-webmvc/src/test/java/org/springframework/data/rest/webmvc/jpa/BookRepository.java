@@ -16,10 +16,12 @@
 package org.springframework.data.rest.webmvc.jpa;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 /**
  * @author Oliver Gierke
  */
+@RestResource(description = "Obtains all books.")
 public interface BookRepository extends CrudRepository<Book, String> {
 
 }

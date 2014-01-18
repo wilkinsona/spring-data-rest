@@ -150,6 +150,16 @@ class RepositoryAwareResourceInformation implements ResourceMetadata {
 	public boolean isPagingResource() {
 		return mapping.isPagingResource();
 	}
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see org.springframework.data.rest.core.mapping.ResourceMetadata#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return mapping.getDescription();
+	}
+
 
 	/* 
 	 * (non-Javadoc)
