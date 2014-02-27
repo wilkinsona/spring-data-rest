@@ -268,11 +268,7 @@ public abstract class AbstractWebIntegrationTests {
 	}
 
 	protected void assertJsonPathDoesntExist(String path, MockHttpServletResponse response) throws Exception {
-
-		try {
-			JsonPath.read(response.getContentAsString(), path);
-			fail(path + " should have failed");
-		} catch (InvalidPathException e) {}
+		assertNull(path + " should not exist in the response: ", JsonPath.read(response.getContentAsString(), path));
 	}
 
 	protected String assertJsonPathEquals(String path, String expected, MockHttpServletResponse response)
